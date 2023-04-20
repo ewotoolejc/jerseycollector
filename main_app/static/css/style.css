@@ -1,0 +1,201 @@
+@media (min-width: 280px) and (max-width:1000px) {
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://img.freepik.com/premium-vector/dark-grey-abstract-hexagon-pattern-background_67845-256.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3vmin;
+  font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;  
+}
+
+nav {
+    overflow: hidden;
+    background-color: rgba(13, 15, 79, .9);
+    border-radius: 4vmin;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    padding: 3vmin;
+    text-decoration: none;
+    font-size: 6vmin;
+    display: block;
+}
+
+nav a:hover {
+    color:rgb(145, 15, 28)
+}
+
+#myLinks {
+    display: none;
+}
+
+nav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    scale: 120%;
+}
+
+#homepg {
+    display: grid;
+    height: 80vmin;
+}
+
+#homeh1 {
+    color: rgb(13, 15, 79);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-align: center;
+    align-self: center;
+    font-weight: bolder;
+}
+
+#footer-text {
+    color:rgb(145, 15, 28);
+    font-weight: bolder;
+    text-align: center;
+}
+
+#aboutpg {
+    display: grid;
+    height: 80vmin;
+}
+
+#abouth1 {
+    color: rgb(13, 15, 79);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-align: center;
+    align-self: center;
+    font-weight: bolder;
+}
+
+#aboutp {
+    display: grid;
+    color: white;
+    text-align: center;
+    background-color: rgba(13, 15, 79, .6);
+    align-self: center;
+    padding: 2vmin;
+    border-radius: 3vmin;
+}
+
+#indexh1 {
+    color: rgb(13, 15, 79);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+}
+@media (min-width: 1001px) {
+    body {
+        display: grid;
+        flex-direction: column;
+        background-image: url('https://img.freepik.com/premium-vector/dark-grey-abstract-hexagon-pattern-background_67845-256.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 3vmin;
+        font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;  
+    }
+      
+      nav {
+          overflow: hidden;
+          background-color: rgba(13, 15, 79, .9);
+          border-radius: 4vmin;
+          position: relative;
+    }
+      
+      nav a {
+          color: white;
+          padding: 3vmin;
+          text-decoration: none;
+          font-size: 6vmin;
+          display: block;
+    }
+      
+      #myLinks {
+          display: none;
+    }
+      
+      
+      nav a.icon {
+          background: black;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          scale: 120%;
+    }
+      
+      #homepg {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 80vh;
+        position: relative;
+    }
+      
+      #homeh1 {
+          color: rgb(13, 15, 79);
+          text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+          text-align: center;
+          align-self: center;
+    }
+      
+      #footer-text {
+          color:rgb(145, 15, 28);
+          font-weight: bolder;
+          text-align: center;
+    }
+
+    #aboutpg {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 80vh;
+    }
+    
+    #abouth1 {
+        color: rgb(13, 15, 79);
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        text-align: center;
+        align-self: center;
+        font-weight: bolder;
+    }
+    
+    #aboutp {
+        display: grid;
+        color: white;
+        text-align: center;
+        background-color: rgba(13, 15, 79, .6);
+        align-self: center;
+        padding: 2vmin;
+        border-radius: 3vmin;
+    }
+
+    #indexh1 {
+        color: rgb(13, 15, 79);
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+}
