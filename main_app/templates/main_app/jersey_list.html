@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<main id="listmain">
+<h1 id="indexh1">Your Jerseys</h1>
+<a href="{% url 'jerseys_create' %}">Add a Jersey/Kit</a>
+{% if object_list %}
+<ul>
+  {% for obj in object_list %}
+    <li>
+      <a href="{{ obj.get_absolute_url }}">{{ obj.jersey_name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>There are no Jerseys in your collection.</p>
+{% endif %}
+
+</main>
+{% endblock %}

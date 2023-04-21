@@ -86,13 +86,27 @@ nav a.icon {
     border-radius: 3vmin;
 }
 
+#listmain {
+    color: white;
+}
+
 #indexh1 {
     color: rgb(13, 15, 79);
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     text-align: center;
 }
 
+#detailmain {
+    color: white;
+}
 
+#detailh1 {
+    color: white;
+}
+
+ul, li {
+    color: white;
+}
 
 
 
@@ -185,6 +199,10 @@ nav a.icon {
         border-radius: 3vmin;
     }
 
+    #listmain {
+        color: white;
+    }
+
     #indexh1 {
         color: rgb(13, 15, 79);
         text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -192,7 +210,21 @@ nav a.icon {
     }
 
 
-
+    #detailmain {
+        color: white;
+    }
+    
+    #detailh1 {
+        color: white;
+    }
+    
+    ul, li {
+        color: white;
+    }
+    
+    #createupdatepg > * {
+        color: white;
+    }
 
 
 

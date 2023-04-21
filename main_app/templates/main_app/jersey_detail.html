@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<main id="detailmain">
+<h1 id="detailh1">{{ object.jersey_name }} Detail</h1><a href="{% url 'jerseys_update' object.id %}">Edit</a>
+
+<ul>
+    <li>Team: {{ object.team_name }}</li>
+    <li>Sport: {{ object.sport }}</li>
+    <li>Date Acquired: {{ object.year }}</li>
+    <li>Description: {{ object.description }}</li>
+</ul>
+
+<img src="{{ object.picture }}"></img>
+<br>
+<a href="{% url 'jerseys_delete' object.id %}">Delete</a>
+</main>
+{% endblock %}
