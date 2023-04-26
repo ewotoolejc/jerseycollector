@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-<main id="createupdatepg">
+<main id="hatcreateupdatepg">
 {% if object %}
 
-<h1>Edit {{object.jersey_name}}</h1>
+<h1>Edit {{object.name}}</h1>
 
 {% else %}
-<h1>Add A Jersey/Kit</h1>
+<h1>Add A Hat</h1>
 {% endif %}
 
 <form action="" method="POST">
    {% csrf_token %}
-       <table id="edittable">
+       <table id="hatedittable">
            {{ form.as_table }}
        </table>
        <input type="submit" value="Submit!" class="btn">

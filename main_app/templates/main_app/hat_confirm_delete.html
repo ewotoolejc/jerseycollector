@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main id="deletemain">
-  <h1>Delete Jersey/Kit</h1>
+<main id="hatdeletemain">
+  <h1>Delete Hat</h1>
 
-  <h4>Are you sure you want to delete {{ object.jersey_name }}?</h4>
+  <h4>Are you sure you want to delete {{ object.name }}?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="Yes please" class="btn">
-    <a href="{% url 'details' object.id %}">Cancel</a>
+    <a href="{% url 'hat_details' object.id %}">Cancel</a>
   </form>
 </main>
 {% endblock %}

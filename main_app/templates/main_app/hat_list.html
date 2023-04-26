@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<main id="hatlistmain">
+<h1 id="hatsindexh1">Your Hats</h1>
+
+<form action="{% url 'hats_create' %}">
+<button class="btn" type="submit">Add a Hat</button>
+</form>
+{% if object_list %}
+<ul>
+  {% for obj in object_list %}
+    <li>
+      <a href="{{ obj.get_absolute_url }}">{{ obj.name }}</a> : From {{ obj.team_name }} in {{ obj.color }}
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>There are no Hats in your collection.</p>
+{% endif %}
+
+</main>
+{% endblock %}

@@ -9,7 +9,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   padding: 3vmin;
-  font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;  
+  font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;
+  color: white;  
 }
 
 nav {
@@ -49,12 +50,16 @@ nav a.icon {
     height: 80vmin;
 }
 
-#homeh1 {
+h1 {
     color: rgb(13, 15, 79);
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     text-align: center;
     align-self: center;
     font-weight: bolder;
+}
+
+h4 {
+    color: white;
 }
 
 #footer-text {
@@ -108,6 +113,19 @@ ul, li {
     color: white;
 }
 
+#createupdatepg > * {
+    color: white;
+}
+
+#edittable {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(13, 15, 79);
+    color: white;
+    border-radius: 3vmin;
+}
 
 
 
@@ -123,17 +141,18 @@ ul, li {
         background-position: center;
         background-attachment: fixed;
         padding: 3vmin;
-        font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;  
+        font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;
+        color: white;  
     }
       
-      nav {
+    nav {
           overflow: hidden;
           background-color: rgba(13, 15, 79, .9);
           border-radius: 4vmin;
           position: relative;
     }
       
-      nav a {
+    nav a {
           color: white;
           padding: 3vmin;
           text-decoration: none;
@@ -141,12 +160,12 @@ ul, li {
           display: block;
     }
       
-      #myLinks {
+    #myLinks {
           display: none;
     }
       
       
-      nav a.icon {
+    nav a.icon {
           background: black;
           display: block;
           position: absolute;
@@ -154,19 +173,27 @@ ul, li {
           top: 0;
           scale: 120%;
     }
-      
-      #homepg {
+    
+    main a {
+        color:rgb(2, 224, 13)
+    }
+
+    #homepg {
         display: grid;
         grid-template-columns: 1fr;
         height: 80vh;
         position: relative;
     }
       
-      #homeh1 {
+    h1 {
           color: rgb(13, 15, 79);
           text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
           text-align: center;
           align-self: center;
+    }
+
+    h4 {
+        color: white;
     }
       
       #footer-text {
@@ -214,8 +241,27 @@ ul, li {
         color: white;
     }
     
-    #detailh1 {
+
+    table th {
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+
+    #hatonjersey {
         color: white;
+        background-color: rgba(13, 15, 79, .6);
+        border-collapse: collapse;
+        border: .5vmin solid;
+        width: 50%;
+        text-align: center;
+    }
+
+    #clean {
+        color: white;
+        background-color: rgba(13, 15, 79, .6);
+        border-collapse: collapse;
+        border: .5vmin solid;
+        width: 50%;
     }
     
     ul, li {
@@ -226,7 +272,15 @@ ul, li {
         color: white;
     }
 
+    #edittable {
+        color: white;
+    }
 
+    .btn {
+        background-color: rgb(13, 15, 79);
+        color: white;
+        border-radius: 3vmin;
+    }
 
 
 

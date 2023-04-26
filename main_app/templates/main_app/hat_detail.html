@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<main id="hatdetailmain">
+<h1 id="hatdetailh1">{{ object.name }} Detail</h1>
+<form action="{% url 'hats_update' object.id %}"><button type="submit" class="btn">Edit</button></form>
+
+<ul>
+    <li>Team: {{ object.team_name }}</li>
+    <li>Color: <span style="color: {{ object.color }}">{{ object.color }}</span></li>
+</ul>
+
+<img src="{{ object.picture }}"></img>
+<br><br>
+<form action="{% url 'hats_delete' object.id %}"><button type="submit" class="btn">Delete Hat</button></form>
+</main>
+{% endblock %}

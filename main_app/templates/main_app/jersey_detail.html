@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <main id="detailmain">
-<h1 id="detailh1">{{ object.jersey_name }} Detail</h1><a href="{% url 'jerseys_update' object.id %}">Edit</a>
+<h1 id="detailh1">{{ object.jersey_name }} Detail</h1>
+<form action="{% url 'jerseys_update' object.id %}"><button type="submit" class="btn">Edit</button></form>
 
 <ul>
     <li>Team: {{ object.team_name }}</li>
@@ -12,6 +13,62 @@
 
 <img src="{{ object.picture }}"></img>
 <br>
-<a href="{% url 'jerseys_delete' object.id %}">Delete</a>
+<br>
+{% if object.hats.count %}
+  <table class="striped" id="hatonjersey">
+    <thead>
+      <tr><th>Hat</th><th>Link</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for hat in object.hats.all %}
+        <tr>
+          <td>{{hat.name}}</td>
+          <td><form action="{{ hat.get_absolute_url }}"><button type="submit" class="btn">Here</button></form></td>
+          <td><form action="{% url 'unassoc_hat' jersey.id hat.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn">Remove</button>
+          </form></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <h3>No Hats Yet!</h3>
+{% endif %}
+<br>
+<br>
+<h3>Available Hats</h3>
+{% if availhats.count %}
+<ul>
+  {% for hat in availhats %}
+  <li>{{ hat.name }}: {{ hat.team_name }} <form action="{% url 'assoc_hat' jersey.id hat.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn">Add Hat?</button></form></li>
+  {% endfor %}
+</ul>
+{% else %}
+<h4>No more hats to add!</h4>
+{% endif %}
+<br>
+<form action="{% url 'jersey_cleaning' object.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Add Cleaning">
+  </form>
+<table class="striped" id="clean">
+    <thead>
+      <tr><th>Date</th><th>Dry Cleaned?</th></tr>
+    </thead>
+    <tbody>
+      {% for cleaning in object.cleaning_set.all %}
+        <tr>
+          <td>{{cleaning.date}}</td>
+          <td>{{cleaning.dry_cleaned}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<br>
+<form action="{% url 'jerseys_delete' object.id %}"><button type="submit" class="btn">Delete Jersey</button></form>
 </main>
 {% endblock %}
