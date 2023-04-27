@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <main id="hatdetailmain">
+<br>
 <h1 id="hatdetailh1">{{ object.name }} Detail</h1>
 <form action="{% url 'hats_update' object.id %}"><button type="submit" class="btn">Edit</button></form>
 
-<ul>
-    <li>Team: {{ object.team_name }}</li>
-    <li>Color: <span style="color: {{ object.color }}">{{ object.color }}</span></li>
+<ul class="list-group">
+    <li class="list-group-item">Team: {{ object.team_name }}</li>
+    <li class="list-group-item">Color: <span style="color: {{ object.color }}">{{ object.color }}</span></li>
 </ul>
-
+<br>
 <img src="{{ object.picture }}"></img>
 <br><br>
 <form action="{% url 'hats_delete' object.id %}"><button type="submit" class="btn">Delete Hat</button></form>

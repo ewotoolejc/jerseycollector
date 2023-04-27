@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 <main id="detailmain">
-<h1 id="detailh1">{{ object.jersey_name }} Detail</h1>
+<br>
+  <h1 id="detailh1">{{ object.jersey_name }} Detail</h1>
 <form action="{% url 'jerseys_update' object.id %}"><button type="submit" class="btn">Edit</button></form>
 
-<ul>
-    <li>Team: {{ object.team_name }}</li>
-    <li>Sport: {{ object.sport }}</li>
-    <li>Date Acquired: {{ object.year }}</li>
-    <li>Description: {{ object.description }}</li>
+<ul class="list-group">
+    <li class="list-group-item">Team: {{ object.team_name }}</li>
+    <li class="list-group-item">Sport: {{ object.sport }}</li>
+    <li class="list-group-item">Date Acquired: {{ object.year }}</li>
+    <li class="list-group-item">Description: {{ object.description }}</li>
 </ul>
-
+<br>
 <img src="{{ object.picture }}"></img>
 <br>
 <br>
 {% if object.hats.count %}
-  <table class="striped" id="hatonjersey">
+  <table class="table table-info table-sm" id="hatonjersey">
     <thead>
-      <tr><th>Hat</th><th>Link</th><th></th></tr>
+      <tr><th>Hat</th><th>Link to Hat Detail</th><th></th></tr>
     </thead>
     <tbody>
       {% for hat in object.hats.all %}
@@ -38,14 +39,13 @@
 <br>
 <br>
 <h3>Available Hats</h3>
+<h4>Click to add:</h4>
 {% if availhats.count %}
-<ul>
+<div class="list-group">
   {% for hat in availhats %}
-  <li>{{ hat.name }}: {{ hat.team_name }} <form action="{% url 'assoc_hat' jersey.id hat.id %}" method="POST">
-    {% csrf_token %}
-    <button type="submit" class="btn">Add Hat?</button></form></li>
+  <form action="{% url 'assoc_hat' jersey.id hat.id %}" method="POST">{% csrf_token %}<button type="submit" class="list-group-item list-group-item-action">{{ hat.name }}: {{ hat.team_name }}</button></form>
   {% endfor %}
-</ul>
+  </div>
 {% else %}
 <h4>No more hats to add!</h4>
 {% endif %}
