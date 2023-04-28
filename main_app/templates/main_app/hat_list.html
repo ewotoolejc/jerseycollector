@@ -5,11 +5,11 @@
 <h1 id="hatsindexh1">Your Hats</h1>
 
 <form action="{% url 'hats_create' %}">
-<button class="btn" type="submit">Add a Hat</button>
+<button class="btn btn-outline-secondary" type="submit">Add a Hat</button>
 </form>
 {% if object_list %}
   {% for obj in object_list %}
-  <div class="card" style="width: 18rem;">
+  <div class="card">
     <img src="{{ obj.picture }}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{ obj.name }}</h5>

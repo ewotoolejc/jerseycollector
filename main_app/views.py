@@ -27,7 +27,7 @@ def JerseyCleaning(request, jersey_id):
 
 class JerseyList(LoginRequiredMixin, ListView):
     model = Jersey
-    # testing below after auth is set up! tested in cat and it worked!
+
     def get_queryset(self):
         return self.model.objects.filter(user=self.request.user)
 

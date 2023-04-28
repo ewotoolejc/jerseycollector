@@ -5,11 +5,11 @@
 <h1 id="indexh1">Your Jerseys</h1>
 
 <form action="{% url 'jerseys_create' %}">
-<button class="btn" type="submit">Add a Jersey/Kit</button>
+<button class="btn btn-outline-secondary" type="submit">Add a Jersey/Kit</button>
 </form>
 {% if object_list %}
 {% for obj in object_list %}
-<div class="card" style="width: 18rem;">
+<div class="card">
   <img src="{{ obj.picture }}" class="card-img-top" alt="Jersey Image">
   <div class="card-body">
     <h3 class="card-title">{{ obj.jersey_name }}</h3>

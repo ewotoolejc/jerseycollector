@@ -3,7 +3,7 @@
 <main id="detailmain">
 <br>
   <h1 id="detailh1">{{ object.jersey_name }} Detail</h1>
-<form action="{% url 'jerseys_update' object.id %}"><button type="submit" class="btn">Edit</button></form>
+<form action="{% url 'jerseys_update' object.id %}"><button type="submit" class="btn btn-outline-secondary">Edit</button></form>
 
 <ul class="list-group">
     <li class="list-group-item">Team: {{ object.team_name }}</li>
@@ -12,7 +12,7 @@
     <li class="list-group-item">Description: {{ object.description }}</li>
 </ul>
 <br>
-<img src="{{ object.picture }}"></img>
+<img src="{{ object.picture }}" class="img-fluid"></img>
 <br>
 <br>
 {% if object.hats.count %}
@@ -53,7 +53,7 @@
 <form action="{% url 'jersey_cleaning' object.id %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn" value="Add Cleaning">
+    <input type="submit" class="btn btn-success" value="Add Cleaning">
   </form>
 <table class="striped" id="clean">
     <thead>
@@ -69,6 +69,6 @@
     </tbody>
   </table>
 <br>
-<form action="{% url 'jerseys_delete' object.id %}"><button type="submit" class="btn">Delete Jersey</button></form>
+<form action="{% url 'jerseys_delete' object.id %}"><button type="submit" class="btn btn-outline-danger">Delete Jersey</button></form>
 </main>
 {% endblock %}

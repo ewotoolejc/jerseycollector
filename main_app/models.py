@@ -40,5 +40,8 @@ class Cleaning(models.Model):
 
     def __str__(self):
         return f"Cleaned on {self.date}"
+    
+    class Meta:
+        ordering = ['-date']
 
     

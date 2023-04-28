@@ -85,12 +85,18 @@ h4 {
     font-weight: bolder;
 }
 
+#leadp {
+    color:red;
+    font-weight: bolder;
+}
+
 #aboutp {
     display: grid;
     color: white;
     text-align: center;
     background-color: rgba(13, 15, 79, .6);
-    align-self: center;
+    justify-self: center;
+    width: 50%;
     padding: 2vmin;
     border-radius: 3vmin;
 }
@@ -110,6 +116,7 @@ h4 {
 
 .card {
     background-color: rgb(255, 172, 99);
+    width: 18rem;
 }
 
 #detailmain {
@@ -119,6 +126,8 @@ h4 {
 .list-group-item {
     background-color: rgba(174, 179, 190, .6);
     color: white;
+    width: 60%;
+    max-width: 80%;
 }
 
 .list-group-item-action {
@@ -142,6 +151,10 @@ table th {
     width: 50%;
 }
 
+#clean th, td {
+    padding: 1vmin;
+}
+
 #createupdatepg {
     color: white;
 }
@@ -152,6 +165,7 @@ table th {
 
 #hatdetailmain li {
     background-color: rgba(255, 216, 211, .8);
+    width: 50%;
 }
 
 .btn {
@@ -174,7 +188,7 @@ table th {
         background-position: center;
         background-attachment: fixed;
         padding: 3vmin;
-        font: 3vmin 'Cabin', Helvetica, Arial, sans-serif;
+        font: 2vmin 'Cabin', Helvetica, Arial, sans-serif;
         color: white;  
     }
       
@@ -189,10 +203,14 @@ table th {
           color: white;
           padding: 3vmin;
           text-decoration: none;
-          font-size: 6vmin;
+          font-size: 4vmin;
           display: block;
     }
-      
+    
+    nav a:hover {
+        color:rgb(145, 15, 28)
+    }
+    
     #myLinks {
           display: none;
     }
@@ -249,12 +267,18 @@ table th {
         font-weight: bolder;
     }
     
+    #leadp {
+        color:red;
+        font-weight: bolder;
+    }
+
     #aboutp {
         display: grid;
         color: white;
         text-align: center;
         background-color: rgba(13, 15, 79, .6);
-        align-self: center;
+        justify-self: center;
+        width: 50%;
         padding: 2vmin;
         border-radius: 3vmin;
     }
@@ -274,6 +298,7 @@ table th {
 
     .card {
         background-color: rgb(255, 172, 99);
+        width: 40rem;
     }
 
     #detailmain {
@@ -283,10 +308,14 @@ table th {
     .list-group-item {
         background-color: rgba(174, 179, 190, .6);
         color: white;
+        width: 50%;
+        max-width: 80%;
     }
     
     .list-group-item-action {
         background-color: rgb(145, 15, 28);
+        width: 50%;
+        max-width: 80%;
     }
 
     table th {
@@ -295,8 +324,6 @@ table th {
     }
 
     #hatonjersey {
-        color: white;
-        background-color: rgba(13, 15, 79, .6);
         border-collapse: collapse;
         border: .5vmin solid;
         width: 50%;
@@ -308,7 +335,11 @@ table th {
         background-color: rgba(13, 15, 79, .6);
         border-collapse: collapse;
         border: .5vmin solid;
-        width: 50%;
+        width: 25%;
+    }
+
+    #clean th, td {
+        padding: 1vmin;
     }
     
     ul, li {
@@ -325,6 +356,7 @@ table th {
 
     #hatdetailmain li {
         background-color: rgba(255, 216, 211, .8);
+        width: 25%;
     }
 
     .btn {
