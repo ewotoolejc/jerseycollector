@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import environ
+
+environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,9 +82,19 @@ WSGI_APPLICATION = 'jerseycollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jerseycollector',
+        'NAME': 'ewotoolejc/jerseycollector',
+        'USER': os.environ['DB_USER']
+        'PASSWORD': os.environ['DB_PW']
+        'HOST': 'db.bit.io'
+        'PORT': '5432'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'jerseycollector',
+#     }
+# }
 
 
 # Password validation
